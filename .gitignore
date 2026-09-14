@@ -1,0 +1,27 @@
+# Quarto build artifacts. Only the Chrome-printed PDF is committed (via LFS);
+# the revealjs .html is an intermediate and the .pptx is a convenience export.
+.quarto/
+*_files/
+*_cache/
+*.html
+*.pptx
+*.print.html
+**/*.quarto_ipynb
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ruff_cache/
+.mypy_cache/
+.pyright/
+.pytest_cache/
+
+# Vector-tile download cache (~300 MB, rebuilt on demand by render_map_previews.py)
+wave/data/tile_cache/
+
+# OS / editor
+.DS_Store
+.serena/
+~$*
