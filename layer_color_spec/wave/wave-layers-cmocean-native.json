@@ -1,0 +1,2109 @@
+{
+  "Wave Power": {
+    "_id": "68c955d8b12e9eb9d3c3fc55",
+    "title": "Wave Power",
+    "metadata": "<p>Omni-directional wave power is the energy flux arriving at a point from all directions. It's units are power per unit length of wave-crest (i.e., kW/m).</p>\n<hr/>\n<p>This data was generated from a regional UnSWAN model forced by a global WaveWatch III simulation. It spanned 32 years from 1979 through 2010. The 'annual' data is a complete average over that time-span. The monthly fields (available via drop-down) are averages across all years of the selected month. The data was developed with funding from the U.S. Department of Energy.<br><br>Additional details on model configuration can be found in the following publications:<br>--<br>Allahdadi, M.N., Gunawan, J. Lai, R. He, V.S. Neary, Development and validation of a regional-scale high-resolution unstructured model for wave energy resource characterization along the US East Coast, Renewable Energy, 2019, 136, 500-511. <a href=\"https://doi.org/10.1016/j.renene.2019.01.020\" target=\"_self\">https://doi.org/10.1016/j.renene.2019.01.020</a> <br>--<br>Ahn, S. V.S. Neary, Allahdadi, N. and R. He, Nearshore wave energy resource characterization along the East Coast of the United States, Renewable Energy, 2021, 172, <a href=\"https://doi.org/10.1016/j.renene.2021.03.037\" target=\"_self\">https://doi.org/10.1016/j.renene.2021.03.037</a>.<br><br>Details on how the variables are calculated can be found in IEC 62600-101:<br>--<br>International Electrotechnical Commission, 2015, \"\"Marine Energy - Wave, tidal and other water current converters; Part 101: Wave energy resource assessment and characterization\"\"; edition 1, <a href=\"https://webstore.iec.ch/publication/22593\" target=\"_self\">https://webstore.iec.ch/publication/22593</a>.\"</p>\n",
+    "tags": [
+      "wave",
+      "Puerto Rico",
+      "Gulf of America",
+      "Gulf of Mexico",
+      "Hawaii",
+      "Pacific",
+      "West Coast",
+      "Atlantic",
+      "Wave",
+      "Model",
+      "Alaska",
+      "U.S."
+    ],
+    "categories": [
+      {
+        "name": "category",
+        "val": [
+          "Wave"
+        ]
+      }
+    ],
+    "legendV2": {
+      "type": "default",
+      "title": "",
+      "units": "kW/m",
+      "legendItems": [
+        {
+          "label": "< 4",
+          "symbol": {
+            "type": "polygon",
+            "color": "#0d0887"
+          }
+        },
+        {
+          "label": "4 - 8",
+          "symbol": {
+            "type": "polygon",
+            "color": "#330597"
+          }
+        },
+        {
+          "label": "8 - 12",
+          "symbol": {
+            "type": "polygon",
+            "color": "#5002a2"
+          }
+        },
+        {
+          "label": "12 - 16",
+          "symbol": {
+            "type": "polygon",
+            "color": "#6a00a8"
+          }
+        },
+        {
+          "label": "16 - 20",
+          "symbol": {
+            "type": "polygon",
+            "color": "#8405a7"
+          }
+        },
+        {
+          "label": "20 - 24",
+          "symbol": {
+            "type": "polygon",
+            "color": "#9c179e"
+          }
+        },
+        {
+          "label": "24 - 28",
+          "symbol": {
+            "type": "polygon",
+            "color": "#b12a90"
+          }
+        },
+        {
+          "label": "28 - 32",
+          "symbol": {
+            "type": "polygon",
+            "color": "#c33d80"
+          }
+        },
+        {
+          "label": "32 - 36",
+          "symbol": {
+            "type": "polygon",
+            "color": "#d35171"
+          }
+        },
+        {
+          "label": "36 - 40",
+          "symbol": {
+            "type": "polygon",
+            "color": "#e16462"
+          }
+        },
+        {
+          "label": "40 - 44",
+          "symbol": {
+            "type": "polygon",
+            "color": "#ed7953"
+          }
+        },
+        {
+          "label": "44 - 48",
+          "symbol": {
+            "type": "polygon",
+            "color": "#f68f44"
+          }
+        },
+        {
+          "label": "48 - 52",
+          "symbol": {
+            "type": "polygon",
+            "color": "#fca636"
+          }
+        },
+        {
+          "label": "52 - 56",
+          "symbol": {
+            "type": "polygon",
+            "color": "#fec029"
+          }
+        },
+        {
+          "label": "56 - 60",
+          "symbol": {
+            "type": "polygon",
+            "color": "#f9dc24"
+          }
+        },
+        {
+          "label": "> 60",
+          "symbol": {
+            "type": "polygon",
+            "color": "#f0f921"
+          }
+        }
+      ]
+    },
+    "tileInfo": {
+      "wms": {},
+      "vector": {
+        "clickable": false,
+        "supported": true,
+        "uriOrName": "mhk-atlas/all-regions-omni_2026",
+        "styleLayers": [
+          {
+            "source-layer": "points",
+            "type": "circle",
+            "paint": {
+              "circle-radius": [
+                "step",
+                [
+                  "zoom"
+                ],
+                1.5,
+                5,
+                2.5,
+                9,
+                3,
+                10,
+                3.5,
+                11,
+                4.5
+              ],
+              "circle-color": [
+                "case",
+                [
+                  "==",
+                  [
+                    "get",
+                    "{{dimension}}"
+                  ],
+                  null
+                ],
+                "transparent",
+                [
+                  "interpolate",
+                  [
+                    "linear"
+                  ],
+                  [
+                    "get",
+                    "{{dimension}}"
+                  ],
+                  0,
+                  "#0d0887",
+                  4000,
+                  "#330597",
+                  8000,
+                  "#5002a2",
+                  12000,
+                  "#6a00a8",
+                  16000,
+                  "#8405a7",
+                  20000,
+                  "#9c179e",
+                  24000,
+                  "#b12a90",
+                  28000,
+                  "#c33d80",
+                  32000,
+                  "#d35171",
+                  36000,
+                  "#e16462",
+                  40000,
+                  "#ed7953",
+                  44000,
+                  "#f68f44",
+                  48000,
+                  "#fca636",
+                  52000,
+                  "#fec029",
+                  56000,
+                  "#f9dc24",
+                  60000,
+                  "#f0f921"
+                ]
+              ],
+              "circle-opacity": 1
+            }
+          },
+          {
+            "source-layer": "hexgrid",
+            "type": "fill",
+            "paint": {
+              "fill-color": [
+                "case",
+                [
+                  "==",
+                  [
+                    "get",
+                    "{{dimension}}"
+                  ],
+                  null
+                ],
+                "transparent",
+                [
+                  "interpolate",
+                  [
+                    "linear"
+                  ],
+                  [
+                    "get",
+                    "{{dimension}}"
+                  ],
+                  0,
+                  "#0d0887",
+                  4000,
+                  "#330597",
+                  8000,
+                  "#5002a2",
+                  12000,
+                  "#6a00a8",
+                  16000,
+                  "#8405a7",
+                  20000,
+                  "#9c179e",
+                  24000,
+                  "#b12a90",
+                  28000,
+                  "#c33d80",
+                  32000,
+                  "#d35171",
+                  36000,
+                  "#e16462",
+                  40000,
+                  "#ed7953",
+                  44000,
+                  "#f68f44",
+                  48000,
+                  "#fca636",
+                  52000,
+                  "#fec029",
+                  56000,
+                  "#f9dc24",
+                  60000,
+                  "#f0f921"
+                ]
+              ],
+              "fill-outline-color": "transparent"
+            }
+          }
+        ],
+        "tileUri": "https://maps-api.nlr.gov/vector-tiles/mhk-atlas/all-regions-omni_2026/metadata.json"
+      },
+      "cog": {}
+    },
+    "downloadInfo": {
+      "strategy": "smalljob",
+      "uri": "https://mapfiles.nlr.gov/downloads/68c955d8b12e9eb9d3c3fc55.zip",
+      "supportedTypes": [
+        "shp"
+      ],
+      "disabledReason": ""
+    },
+    "variables": [
+      {
+        "dbColumn": "region",
+        "title": "Region",
+        "units": "name",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "mean_{{dimension}}",
+        "title": "Avg - {{dimension}}",
+        "units": "kW/m",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      }
+    ],
+    "dimensions": [
+      {
+        "paramName": "yr",
+        "title": "Annual"
+      },
+      {
+        "paramName": "01",
+        "title": "January"
+      },
+      {
+        "paramName": "02",
+        "title": "February"
+      },
+      {
+        "paramName": "03",
+        "title": "March"
+      },
+      {
+        "paramName": "04",
+        "title": "April"
+      },
+      {
+        "paramName": "05",
+        "title": "May"
+      },
+      {
+        "paramName": "06",
+        "title": "June"
+      },
+      {
+        "paramName": "07",
+        "title": "July"
+      },
+      {
+        "paramName": "08",
+        "title": "August"
+      },
+      {
+        "paramName": "09",
+        "title": "September"
+      },
+      {
+        "paramName": "10",
+        "title": "October"
+      },
+      {
+        "paramName": "11",
+        "title": "November"
+      },
+      {
+        "paramName": "12",
+        "title": "December"
+      }
+    ],
+    "defaultDisplayInfo": {
+      "dimensionSelectionLabel": "Timeframe"
+    },
+    "metaTags": [
+      "wave",
+      "hindcast",
+      "vector-tiles",
+      "hexgrid-and-point-vector-layers"
+    ],
+    "visible": true,
+    "isProtected": false,
+    "subtitle": ""
+  },
+  "Significant Wave Height": {
+    "_id": "68c95961b12e9eb9d3c3fc56",
+    "title": "Significant Wave Height",
+    "metadata": "<p><span >Significant wave height is a common descriptor of wave elevations for mixed sea states. Following the IEC definitions, we utilize the 'four times the standard deviation of the surface elevation' definition, in meters.</span></p>\n<hr/>\n<p>This data was generated from a regional UnSWAN model forced by a global WaveWatch III simulation. It spanned 32 years from 1979 through 2010. The 'annual' data is a complete average over that time-span. The monthly fields (available via drop-down) are averages across all years of the selected month. The data was developed with funding from the U.S. Department of Energy.<br><br>Additional details on model configuration can be found in the following publications:<br>--<br>Allahdadi, M.N., Gunawan, J. Lai, R. He, V.S. Neary, Development and validation of a regional-scale high-resolution unstructured model for wave energy resource characterization along the US East Coast, Renewable Energy, 2019, 136, 500-511. <a href=\"https://doi.org/10.1016/j.renene.2019.01.020\" target=\"_self\">https://doi.org/10.1016/j.renene.2019.01.020</a> <br>--<br>Ahn, S. V.S. Neary, Allahdadi, N. and R. He, Nearshore wave energy resource characterization along the East Coast of the United States, Renewable Energy, 2021, 172, <a href=\"https://doi.org/10.1016/j.renene.2021.03.037\" target=\"_self\">https://doi.org/10.1016/j.renene.2021.03.037</a>.<br><br>Details on how the variables are calculated can be found in IEC 62600-101:<br>--<br>International Electrotechnical Commission, 2015, \"\"Marine Energy - Wave, tidal and other water current converters; Part 101: Wave energy resource assessment and characterization\"\"; edition 1, <a href=\"https://webstore.iec.ch/publication/22593\" target=\"_self\">https://webstore.iec.ch/publication/22593</a>.\"<br></p>\n",
+    "tags": [
+      "Pacific",
+      "West Coast",
+      "Atlantic",
+      "Hawaii",
+      "Alaska",
+      "Puerto Rico",
+      "Gulf of America",
+      "Gulf of Mexico",
+      "U.S.",
+      "Model",
+      "Wave"
+    ],
+    "categories": [
+      {
+        "name": "category",
+        "val": [
+          "Wave"
+        ]
+      }
+    ],
+    "legendV2": {
+      "type": "default",
+      "title": "",
+      "units": "",
+      "legendItems": [
+        {
+          "label": "< 0.25",
+          "symbol": {
+            "type": "polygon",
+            "color": "#e6f1f1"
+          }
+        },
+        {
+          "label": "0.25 - 0.50",
+          "symbol": {
+            "type": "polygon",
+            "color": "#c7e2e7"
+          }
+        },
+        {
+          "label": "0.50 - 0.75",
+          "symbol": {
+            "type": "polygon",
+            "color": "#abd3e3"
+          }
+        },
+        {
+          "label": "0.75 - 1.00",
+          "symbol": {
+            "type": "polygon",
+            "color": "#92c3e2"
+          }
+        },
+        {
+          "label": "1.00 - 1.25",
+          "symbol": {
+            "type": "polygon",
+            "color": "#7eb0e4"
+          }
+        },
+        {
+          "label": "1.25 - 1.50",
+          "symbol": {
+            "type": "polygon",
+            "color": "#749de5"
+          }
+        },
+        {
+          "label": "1.50 - 1.75",
+          "symbol": {
+            "type": "polygon",
+            "color": "#7488e1"
+          }
+        },
+        {
+          "label": "1.75 - 2.00",
+          "symbol": {
+            "type": "polygon",
+            "color": "#7871d5"
+          }
+        },
+        {
+          "label": "2.00 - 2.25",
+          "symbol": {
+            "type": "polygon",
+            "color": "#795cc3"
+          }
+        },
+        {
+          "label": "2.25 - 2.50",
+          "symbol": {
+            "type": "polygon",
+            "color": "#7849ad"
+          }
+        },
+        {
+          "label": "2.50 - 2.75",
+          "symbol": {
+            "type": "polygon",
+            "color": "#733793"
+          }
+        },
+        {
+          "label": "2.75 - 3.00",
+          "symbol": {
+            "type": "polygon",
+            "color": "#6a2675"
+          }
+        },
+        {
+          "label": "3.00 - 3.25",
+          "symbol": {
+            "type": "polygon",
+            "color": "#5d1a58"
+          }
+        },
+        {
+          "label": "3.25 - 3.50",
+          "symbol": {
+            "type": "polygon",
+            "color": "#4b133b"
+          }
+        },
+        {
+          "label": "> 3.50",
+          "symbol": {
+            "type": "polygon",
+            "color": "#360e24"
+          }
+        }
+      ]
+    },
+    "tileInfo": {
+      "wms": {},
+      "vector": {
+        "clickable": false,
+        "supported": true,
+        "uriOrName": "mhk-atlas/all-regions-significant_wave_height_2026",
+        "styleLayers": [
+          {
+            "source-layer": "hexgrid",
+            "type": "fill",
+            "paint": {
+              "fill-color": [
+                "step",
+                [
+                  "to-number",
+                  [
+                    "get",
+                    "{{dimension}}"
+                  ]
+                ],
+                "#e6f1f1",
+                0.25,
+                "#c7e2e7",
+                0.5,
+                "#abd3e3",
+                0.75,
+                "#92c3e2",
+                1.0,
+                "#7eb0e4",
+                1.25,
+                "#749de5",
+                1.5,
+                "#7488e1",
+                1.75,
+                "#7871d5",
+                2.0,
+                "#795cc3",
+                2.25,
+                "#7849ad",
+                2.5,
+                "#733793",
+                2.75,
+                "#6a2675",
+                3.0,
+                "#5d1a58",
+                3.25,
+                "#4b133b",
+                3.5,
+                "#360e24"
+              ],
+              "fill-outline-color": "transparent"
+            }
+          },
+          {
+            "source-layer": "points",
+            "type": "circle",
+            "paint": {
+              "circle-radius": [
+                "step",
+                [
+                  "zoom"
+                ],
+                1.5,
+                5,
+                2.5,
+                9,
+                3,
+                10,
+                3.5,
+                11,
+                4.5
+              ],
+              "circle-color": [
+                "step",
+                [
+                  "to-number",
+                  [
+                    "get",
+                    "{{dimension}}"
+                  ]
+                ],
+                "#e6f1f1",
+                0.25,
+                "#c7e2e7",
+                0.5,
+                "#abd3e3",
+                0.75,
+                "#92c3e2",
+                1.0,
+                "#7eb0e4",
+                1.25,
+                "#749de5",
+                1.5,
+                "#7488e1",
+                1.75,
+                "#7871d5",
+                2.0,
+                "#795cc3",
+                2.25,
+                "#7849ad",
+                2.5,
+                "#733793",
+                2.75,
+                "#6a2675",
+                3.0,
+                "#5d1a58",
+                3.25,
+                "#4b133b",
+                3.5,
+                "#360e24"
+              ],
+              "circle-opacity": 1
+            }
+          }
+        ],
+        "tileUri": "https://maps-api.nlr.gov/vector-tiles/mhk-atlas/all-regions-significant_wave_height_2026/metadata.json"
+      },
+      "cog": {}
+    },
+    "downloadInfo": {
+      "strategy": "smalljob",
+      "uri": "https://mapfiles.nlr.gov/downloads/68c95961b12e9eb9d3c3fc56.zip",
+      "supportedTypes": [
+        "shp"
+      ],
+      "disabledReason": ""
+    },
+    "variables": [
+      {
+        "dbColumn": "region",
+        "title": "Region",
+        "units": "name",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "mean_{{dimension}}",
+        "title": "Avg - {{dimension}}",
+        "units": "m",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      }
+    ],
+    "dimensions": [
+      {
+        "paramName": "yr",
+        "title": "Annual"
+      },
+      {
+        "paramName": "01",
+        "title": "January"
+      },
+      {
+        "paramName": "02",
+        "title": "February"
+      },
+      {
+        "paramName": "03",
+        "title": "March"
+      },
+      {
+        "paramName": "04",
+        "title": "April"
+      },
+      {
+        "paramName": "05",
+        "title": "May"
+      },
+      {
+        "paramName": "06",
+        "title": "June"
+      },
+      {
+        "paramName": "07",
+        "title": "July"
+      },
+      {
+        "paramName": "08",
+        "title": "August"
+      },
+      {
+        "paramName": "09",
+        "title": "September"
+      },
+      {
+        "paramName": "10",
+        "title": "October"
+      },
+      {
+        "paramName": "11",
+        "title": "November"
+      },
+      {
+        "paramName": "12",
+        "title": "December"
+      }
+    ],
+    "defaultDisplayInfo": {
+      "dimensionSelectionLabel": "Timeframe"
+    },
+    "metaTags": [
+      "vector-tiles",
+      "hindcast",
+      "wave",
+      "mhk-2025",
+      "hexgrid-and-point-vector-layers"
+    ],
+    "visible": false,
+    "isProtected": false,
+    "subtitle": "",
+    "_cmoceanColormap": "cmocean.cm.dense"
+  },
+  "Energy Period": {
+    "_id": "68c95b85b12e9eb9d3c3fc57",
+    "title": "Energy Period",
+    "metadata": "<p><span >Energy period is the \"preferred characteristic wave period\" for wave energy resource characterization according to IEC 62600-101. It is the 'variance weighted mean-period' of the wave spectrum, in seconds.</span></p>\n<hr/>\n<p>This data was generated from a regional UnSWAN model forced by a global WaveWatch III simulation. It spanned 32 years from 1979 through 2010. The 'annual' data is a complete average over that time-span. The monthly fields (available via drop-down) are averages across all years of the selected month. The data was developed with funding from the U.S. Department of Energy.<br><br>Additional details on model configuration can be found in the following publications:<br>--<br>Allahdadi, M.N., Gunawan, J. Lai, R. He, V.S. Neary, Development and validation of a regional-scale high-resolution unstructured model for wave energy resource characterization along the US East Coast, Renewable Energy, 2019, 136, 500-511. <a href=\"https://doi.org/10.1016/j.renene.2019.01.020\" target=\"_self\">https://doi.org/10.1016/j.renene.2019.01.020</a> <br>--<br>Ahn, S. V.S. Neary, Allahdadi, N. and R. He, Nearshore wave energy resource characterization along the East Coast of the United States, Renewable Energy, 2021, 172, <a href=\"https://doi.org/10.1016/j.renene.2021.03.037\" target=\"_self\">https://doi.org/10.1016/j.renene.2021.03.037</a>.<br><br>Details on how the variables are calculated can be found in IEC 62600-101:<br>--<br>International Electrotechnical Commission, 2015, \"\"Marine Energy - Wave, tidal and other water current converters; Part 101: Wave energy resource assessment and characterization\"\"; edition 1, <a href=\"https://webstore.iec.ch/publication/22593\" target=\"_self\">https://webstore.iec.ch/publication/22593</a>.\"</p>\n",
+    "tags": [
+      "Hawaii",
+      "West Coast",
+      "Pacific",
+      "Atlantic",
+      "Alaska",
+      "Puerto Rico",
+      "Gulf of America",
+      "Gulf of Mexico",
+      "U.S.",
+      "Model",
+      "Wave"
+    ],
+    "categories": [
+      {
+        "name": "category",
+        "val": [
+          "Wave"
+        ]
+      }
+    ],
+    "legendV2": {
+      "type": "default",
+      "title": "",
+      "units": "s",
+      "legendItems": [
+        {
+          "label": "< 4.5",
+          "symbol": {
+            "type": "polygon",
+            "color": "#2a186c"
+          }
+        },
+        {
+          "label": "4.5 - 5.0",
+          "symbol": {
+            "type": "polygon",
+            "color": "#2e1e95"
+          }
+        },
+        {
+          "label": "5.0 - 5.5",
+          "symbol": {
+            "type": "polygon",
+            "color": "#1d37a1"
+          }
+        },
+        {
+          "label": "5.5 - 6.0",
+          "symbol": {
+            "type": "polygon",
+            "color": "#0d4e96"
+          }
+        },
+        {
+          "label": "6.0 - 6.5",
+          "symbol": {
+            "type": "polygon",
+            "color": "#125f8f"
+          }
+        },
+        {
+          "label": "6.5 - 7.0",
+          "symbol": {
+            "type": "polygon",
+            "color": "#206e8b"
+          }
+        },
+        {
+          "label": "7.0 - 7.5",
+          "symbol": {
+            "type": "polygon",
+            "color": "#2d7c89"
+          }
+        },
+        {
+          "label": "7.5 - 8.0",
+          "symbol": {
+            "type": "polygon",
+            "color": "#378b88"
+          }
+        },
+        {
+          "label": "8.0 - 8.5",
+          "symbol": {
+            "type": "polygon",
+            "color": "#409a86"
+          }
+        },
+        {
+          "label": "8.5 - 9.0",
+          "symbol": {
+            "type": "polygon",
+            "color": "#4aaa81"
+          }
+        },
+        {
+          "label": "9.0 - 9.5",
+          "symbol": {
+            "type": "polygon",
+            "color": "#5ab978"
+          }
+        },
+        {
+          "label": "9.5 - 10.0",
+          "symbol": {
+            "type": "polygon",
+            "color": "#71c86b"
+          }
+        },
+        {
+          "label": "10.0 - 10.5",
+          "symbol": {
+            "type": "polygon",
+            "color": "#94d35d"
+          }
+        },
+        {
+          "label": "10.5 - 11.0",
+          "symbol": {
+            "type": "polygon",
+            "color": "#bddc62"
+          }
+        },
+        {
+          "label": "11.0 - 11.5",
+          "symbol": {
+            "type": "polygon",
+            "color": "#e0e57a"
+          }
+        },
+        {
+          "label": "> 11.5",
+          "symbol": {
+            "type": "polygon",
+            "color": "#fdef9a"
+          }
+        }
+      ]
+    },
+    "tileInfo": {
+      "wms": {},
+      "vector": {
+        "clickable": false,
+        "supported": true,
+        "uriOrName": "mhk-atlas/all-regions-energy_period_2026",
+        "styleLayers": [
+          {
+            "source-layer": "hexgrid",
+            "type": "fill",
+            "paint": {
+              "fill-color": [
+                "step",
+                [
+                  "to-number",
+                  [
+                    "get",
+                    "{{dimension}}"
+                  ]
+                ],
+                "#2a186c",
+                4.5,
+                "#2e1e95",
+                5.0,
+                "#1d37a1",
+                5.5,
+                "#0d4e96",
+                6.0,
+                "#125f8f",
+                6.5,
+                "#206e8b",
+                7.0,
+                "#2d7c89",
+                7.5,
+                "#378b88",
+                8.0,
+                "#409a86",
+                8.5,
+                "#4aaa81",
+                9.0,
+                "#5ab978",
+                9.5,
+                "#71c86b",
+                10.0,
+                "#94d35d",
+                10.5,
+                "#bddc62",
+                11.0,
+                "#e0e57a",
+                11.5,
+                "#fdef9a"
+              ],
+              "fill-outline-color": "transparent"
+            }
+          },
+          {
+            "source-layer": "points",
+            "type": "circle",
+            "paint": {
+              "circle-radius": [
+                "step",
+                [
+                  "zoom"
+                ],
+                1.5,
+                5,
+                2.5,
+                9,
+                3,
+                10,
+                3.5,
+                11,
+                4.5
+              ],
+              "circle-color": [
+                "step",
+                [
+                  "to-number",
+                  [
+                    "get",
+                    "{{dimension}}"
+                  ]
+                ],
+                "#2a186c",
+                4.5,
+                "#2e1e95",
+                5.0,
+                "#1d37a1",
+                5.5,
+                "#0d4e96",
+                6.0,
+                "#125f8f",
+                6.5,
+                "#206e8b",
+                7.0,
+                "#2d7c89",
+                7.5,
+                "#378b88",
+                8.0,
+                "#409a86",
+                8.5,
+                "#4aaa81",
+                9.0,
+                "#5ab978",
+                9.5,
+                "#71c86b",
+                10.0,
+                "#94d35d",
+                10.5,
+                "#bddc62",
+                11.0,
+                "#e0e57a",
+                11.5,
+                "#fdef9a"
+              ],
+              "circle-opacity": 1
+            }
+          }
+        ],
+        "tileUri": "https://maps-api.nlr.gov/vector-tiles/mhk-atlas/all-regions-energy_period_2026/metadata.json"
+      },
+      "cog": {}
+    },
+    "downloadInfo": {
+      "strategy": "smalljob",
+      "uri": "https://mapfiles.nlr.gov/downloads/68c95b85b12e9eb9d3c3fc57.zip",
+      "supportedTypes": [
+        "shp"
+      ],
+      "disabledReason": ""
+    },
+    "variables": [
+      {
+        "dbColumn": "region",
+        "title": "Region",
+        "units": "name",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "mean_{{dimension}}",
+        "title": "Avg - {{dimension}}",
+        "units": "s",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      }
+    ],
+    "dimensions": [
+      {
+        "paramName": "yr",
+        "title": "Annual"
+      },
+      {
+        "paramName": "01",
+        "title": "January"
+      },
+      {
+        "paramName": "02",
+        "title": "February"
+      },
+      {
+        "paramName": "03",
+        "title": "March"
+      },
+      {
+        "paramName": "04",
+        "title": "April"
+      },
+      {
+        "paramName": "05",
+        "title": "May"
+      },
+      {
+        "paramName": "06",
+        "title": "June"
+      },
+      {
+        "paramName": "07",
+        "title": "July"
+      },
+      {
+        "paramName": "08",
+        "title": "August"
+      },
+      {
+        "paramName": "09",
+        "title": "September"
+      },
+      {
+        "paramName": "10",
+        "title": "October"
+      },
+      {
+        "paramName": "11",
+        "title": "November"
+      },
+      {
+        "paramName": "12",
+        "title": "December"
+      }
+    ],
+    "defaultDisplayInfo": {
+      "dimensionSelectionLabel": "Timeframe"
+    },
+    "metaTags": [
+      "vector-tiles",
+      "hindcast",
+      "wave",
+      "mhk-2025",
+      "hexgrid-and-point-vector-layers"
+    ],
+    "visible": false,
+    "isProtected": false,
+    "subtitle": "",
+    "_cmoceanColormap": "cmocean.cm.haline"
+  },
+  "Directionality Coefficient": {
+    "_id": "68c95cffb12e9eb9d3c3fc58",
+    "title": "Directionality Coefficient",
+    "metadata": "<p>A characteristic measure of the directional spreading of wave power is the directionality coefficient, which is the ratio of the maximum directionally resolved wave power to the omni- directional wave power. Higher values indicate less spreading. As a ratio of two quantities with the same units, this variable has no units.</p>\n<hr/>\n<p>This data was generated from a regional UnSWAN model forced by a global WaveWatch III simulation. It spanned 32 years from 1979 through 2010. The 'annual' data is a complete average over that time-span. The monthly fields (available via drop-down) are averages across all years of the selected month. The data was developed with funding from the U.S. Department of Energy.<br><br>Additional details on model configuration can be found in the following publications:<br>--<br>Allahdadi, M.N., Gunawan, J. Lai, R. He, V.S. Neary, Development and validation of a regional-scale high-resolution unstructured model for wave energy resource characterization along the US East Coast, Renewable Energy, 2019, 136, 500-511. <a href=\"https://doi.org/10.1016/j.renene.2019.01.020\" target=\"_self\">https://doi.org/10.1016/j.renene.2019.01.020</a> <br>--<br>Ahn, S. V.S. Neary, Allahdadi, N. and R. He, Nearshore wave energy resource characterization along the East Coast of the United States, Renewable Energy, 2021, 172, <a href=\"https://doi.org/10.1016/j.renene.2021.03.037\" target=\"_self\">https://doi.org/10.1016/j.renene.2021.03.037</a>.<br><br>Details on how the variables are calculated can be found in IEC 62600-101:<br>--<br>International Electrotechnical Commission, 2015, \"\"Marine Energy - Wave, tidal and other water current converters; Part 101: Wave energy resource assessment and characterization\"\"; edition 1, <a href=\"https://webstore.iec.ch/publication/22593\" target=\"_self\">https://webstore.iec.ch/publication/22593</a>.\"</p>\n",
+    "tags": [
+      "Hawaii",
+      "Pacific",
+      "West Coast",
+      "Atlantic",
+      "Alaska",
+      "Puerto Rico",
+      "Gulf of America",
+      "Gulf of Mexico",
+      "U.S.",
+      "Wave",
+      "Model"
+    ],
+    "categories": [
+      {
+        "name": "category",
+        "val": [
+          "Wave"
+        ]
+      }
+    ],
+    "legendV2": {
+      "type": "default",
+      "title": "",
+      "units": "-",
+      "legendItems": [
+        {
+          "label": "< 0.45",
+          "symbol": {
+            "type": "polygon",
+            "color": "#fff6f4"
+          }
+        },
+        {
+          "label": "0.45 - 0.50",
+          "symbol": {
+            "type": "polygon",
+            "color": "#dfe1d3"
+          }
+        },
+        {
+          "label": "0.50 - 0.55",
+          "symbol": {
+            "type": "polygon",
+            "color": "#bdceb5"
+          }
+        },
+        {
+          "label": "0.55 - 0.60",
+          "symbol": {
+            "type": "polygon",
+            "color": "#99be9d"
+          }
+        },
+        {
+          "label": "0.60 - 0.65",
+          "symbol": {
+            "type": "polygon",
+            "color": "#6fad8b"
+          }
+        },
+        {
+          "label": "0.65 - 0.70",
+          "symbol": {
+            "type": "polygon",
+            "color": "#419d82"
+          }
+        },
+        {
+          "label": "0.70 - 0.75",
+          "symbol": {
+            "type": "polygon",
+            "color": "#1a8a7d"
+          }
+        },
+        {
+          "label": "0.75 - 0.80",
+          "symbol": {
+            "type": "polygon",
+            "color": "#127576"
+          }
+        },
+        {
+          "label": "0.80 - 0.85",
+          "symbol": {
+            "type": "polygon",
+            "color": "#1a5e6b"
+          }
+        },
+        {
+          "label": "0.85 - 0.90",
+          "symbol": {
+            "type": "polygon",
+            "color": "#1c495e"
+          }
+        },
+        {
+          "label": "0.90 - 0.95",
+          "symbol": {
+            "type": "polygon",
+            "color": "#1a3450"
+          }
+        },
+        {
+          "label": "> 0.95",
+          "symbol": {
+            "type": "polygon",
+            "color": "#151d44"
+          }
+        }
+      ]
+    },
+    "tileInfo": {
+      "wms": {},
+      "vector": {
+        "clickable": false,
+        "supported": true,
+        "uriOrName": "mhk-atlas/all-regions-directionality_coefficient_2026",
+        "styleLayers": [
+          {
+            "source-layer": "hexgrid",
+            "type": "fill",
+            "paint": {
+              "fill-color": [
+                "step",
+                [
+                  "to-number",
+                  [
+                    "get",
+                    "{{dimension}}"
+                  ]
+                ],
+                "#fff6f4",
+                0.45,
+                "#dfe1d3",
+                0.5,
+                "#bdceb5",
+                0.55,
+                "#99be9d",
+                0.6,
+                "#6fad8b",
+                0.65,
+                "#419d82",
+                0.7,
+                "#1a8a7d",
+                0.75,
+                "#127576",
+                0.8,
+                "#1a5e6b",
+                0.85,
+                "#1c495e",
+                0.9,
+                "#1a3450",
+                0.95,
+                "#151d44"
+              ],
+              "fill-outline-color": "transparent"
+            }
+          },
+          {
+            "source-layer": "points",
+            "type": "circle",
+            "paint": {
+              "circle-radius": [
+                "step",
+                [
+                  "zoom"
+                ],
+                1.5,
+                5,
+                2.5,
+                9,
+                3,
+                10,
+                3.5,
+                11,
+                4.5
+              ],
+              "circle-color": [
+                "step",
+                [
+                  "to-number",
+                  [
+                    "get",
+                    "{{dimension}}"
+                  ]
+                ],
+                "#fff6f4",
+                0.45,
+                "#dfe1d3",
+                0.5,
+                "#bdceb5",
+                0.55,
+                "#99be9d",
+                0.6,
+                "#6fad8b",
+                0.65,
+                "#419d82",
+                0.7,
+                "#1a8a7d",
+                0.75,
+                "#127576",
+                0.8,
+                "#1a5e6b",
+                0.85,
+                "#1c495e",
+                0.9,
+                "#1a3450",
+                0.95,
+                "#151d44"
+              ],
+              "circle-opacity": 1
+            }
+          }
+        ],
+        "tileUri": "https://maps-api.nlr.gov/vector-tiles/mhk-atlas/all-regions-directionality_coefficient_2026/metadata.json"
+      },
+      "cog": {}
+    },
+    "downloadInfo": {
+      "strategy": "smalljob",
+      "uri": "https://mapfiles.nlr.gov/downloads/68c95cffb12e9eb9d3c3fc58.zip",
+      "supportedTypes": [
+        "shp"
+      ],
+      "disabledReason": ""
+    },
+    "variables": [
+      {
+        "dbColumn": "region",
+        "title": "Region",
+        "units": "name",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "mean_{{dimension}}",
+        "title": "Avg - {{dimension}}",
+        "units": "-",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      }
+    ],
+    "dimensions": [
+      {
+        "paramName": "yr",
+        "title": "Annual"
+      },
+      {
+        "paramName": "01",
+        "title": "January"
+      },
+      {
+        "paramName": "02",
+        "title": "February"
+      },
+      {
+        "paramName": "03",
+        "title": "March"
+      },
+      {
+        "paramName": "04",
+        "title": "April"
+      },
+      {
+        "paramName": "05",
+        "title": "May"
+      },
+      {
+        "paramName": "06",
+        "title": "June"
+      },
+      {
+        "paramName": "07",
+        "title": "July"
+      },
+      {
+        "paramName": "08",
+        "title": "August"
+      },
+      {
+        "paramName": "09",
+        "title": "September"
+      },
+      {
+        "paramName": "10",
+        "title": "October"
+      },
+      {
+        "paramName": "11",
+        "title": "November"
+      },
+      {
+        "paramName": "12",
+        "title": "December"
+      }
+    ],
+    "defaultDisplayInfo": {
+      "dimensionSelectionLabel": "Timeframe"
+    },
+    "metaTags": [
+      "hexgrid-and-point-vector-layers",
+      "mhk-2025",
+      "wave",
+      "hindcast",
+      "vector-tiles"
+    ],
+    "visible": false,
+    "isProtected": false,
+    "subtitle": "",
+    "_cmoceanColormap": "cmocean.cm.tempo"
+  },
+  "Wave Direction": {
+    "_id": "68c95e2cb12e9eb9d3c3fc59",
+    "title": "Wave Direction",
+    "metadata": "<p><span >This is the direction from which the most wave energy is travelling. This is calculated following the definition of \"Direction of maximum directionally resolved wave power\" in IEC 62600-101 section 9.2.6. Units are degrees clockwise from North.</span></p>\n<hr/>\n<p>This data was generated from a regional UnSWAN model forced by a global WaveWatch III simulation. It spanned 32 years from 1979 through 2010. The 'annual' data is a complete average over that time-span. The monthly fields (available via drop-down) are averages across all years of the selected month. The data was developed with funding from the U.S. Department of Energy.<br><br>Additional details on model configuration can be found in the following publications:<br>--<br>Allahdadi, M.N., Gunawan, J. Lai, R. He, V.S. Neary, Development and validation of a regional-scale high-resolution unstructured model for wave energy resource characterization along the US East Coast, Renewable Energy, 2019, 136, 500-511. <a href=\"https://doi.org/10.1016/j.renene.2019.01.020\" target=\"_self\">https://doi.org/10.1016/j.renene.2019.01.020</a> <br>--<br>Ahn, S. V.S. Neary, Allahdadi, N. and R. He, Nearshore wave energy resource characterization along the East Coast of the United States, Renewable Energy, 2021, 172, <a href=\"https://doi.org/10.1016/j.renene.2021.03.037\" target=\"_self\">https://doi.org/10.1016/j.renene.2021.03.037</a>.<br><br>Details on how the variables are calculated can be found in IEC 62600-101:<br>--<br>International Electrotechnical Commission, 2015, \"\"Marine Energy - Wave, tidal and other water current converters; Part 101: Wave energy resource assessment and characterization\"\"; edition 1, <a href=\"https://webstore.iec.ch/publication/22593\" target=\"_self\">https://webstore.iec.ch/publication/22593</a>.\"</p>\n",
+    "tags": [
+      "Hawaii",
+      "Pacific",
+      "West Coast",
+      "Atlantic",
+      "Alaska",
+      "Puerto Rico",
+      "Gulf of America",
+      "Gulf of Mexico",
+      "Wave",
+      "Model",
+      "U.S."
+    ],
+    "metaTags": [
+      "hexgrid-and-point-vector-layers",
+      "mhk-2021",
+      "wave",
+      "hindcast",
+      "vector-tiles"
+    ],
+    "categories": [
+      {
+        "name": "category",
+        "val": [
+          "Wave"
+        ]
+      }
+    ],
+    "dimensions": [
+      {
+        "paramName": "yr",
+        "title": "Annual",
+        "cogBandNumber": 1
+      },
+      {
+        "paramName": "01",
+        "title": "January",
+        "cogBandNumber": 2
+      },
+      {
+        "paramName": "02",
+        "title": "February",
+        "cogBandNumber": 3
+      },
+      {
+        "paramName": "03",
+        "title": "March",
+        "cogBandNumber": 4
+      },
+      {
+        "paramName": "04",
+        "title": "April",
+        "cogBandNumber": 5
+      },
+      {
+        "paramName": "05",
+        "title": "May",
+        "cogBandNumber": 6
+      },
+      {
+        "paramName": "06",
+        "title": "June",
+        "cogBandNumber": 7
+      },
+      {
+        "paramName": "07",
+        "title": "July",
+        "cogBandNumber": 8
+      },
+      {
+        "paramName": "08",
+        "title": "August",
+        "cogBandNumber": 9
+      },
+      {
+        "paramName": "09",
+        "title": "September",
+        "cogBandNumber": 10
+      },
+      {
+        "paramName": "10",
+        "title": "October",
+        "cogBandNumber": 11
+      },
+      {
+        "paramName": "11",
+        "title": "November",
+        "cogBandNumber": 12
+      },
+      {
+        "paramName": "12",
+        "title": "December",
+        "cogBandNumber": 13
+      }
+    ],
+    "variables": [
+      {
+        "dbColumn": "region",
+        "title": "Region",
+        "units": "name",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "mean_{{dimension}}",
+        "title": "Avg - {{dimension}}",
+        "units": "deg",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true,
+        "isMappable": true
+      }
+    ],
+    "legendV2": {
+      "legendItems": [
+        {
+          "label": "0",
+          "symbol": {
+            "type": "polygon",
+            "color": "#a8780d"
+          }
+        },
+        {
+          "label": "22",
+          "symbol": {
+            "type": "polygon",
+            "color": "#be6828"
+          }
+        },
+        {
+          "label": "45",
+          "symbol": {
+            "type": "polygon",
+            "color": "#cf5643"
+          }
+        },
+        {
+          "label": "68",
+          "symbol": {
+            "type": "polygon",
+            "color": "#db4066"
+          }
+        },
+        {
+          "label": "90",
+          "symbol": {
+            "type": "polygon",
+            "color": "#df2a93"
+          }
+        },
+        {
+          "label": "112",
+          "symbol": {
+            "type": "polygon",
+            "color": "#d529c4"
+          }
+        },
+        {
+          "label": "135",
+          "symbol": {
+            "type": "polygon",
+            "color": "#c041e5"
+          }
+        },
+        {
+          "label": "158",
+          "symbol": {
+            "type": "polygon",
+            "color": "#a25cf3"
+          }
+        },
+        {
+          "label": "180",
+          "symbol": {
+            "type": "polygon",
+            "color": "#7d73f0"
+          }
+        },
+        {
+          "label": "202",
+          "symbol": {
+            "type": "polygon",
+            "color": "#5285dc"
+          }
+        },
+        {
+          "label": "225",
+          "symbol": {
+            "type": "polygon",
+            "color": "#2c90bc"
+          }
+        },
+        {
+          "label": "248",
+          "symbol": {
+            "type": "polygon",
+            "color": "#19959c"
+          }
+        },
+        {
+          "label": "270",
+          "symbol": {
+            "type": "polygon",
+            "color": "#0c987c"
+          }
+        },
+        {
+          "label": "292",
+          "symbol": {
+            "type": "polygon",
+            "color": "#249a52"
+          }
+        },
+        {
+          "label": "315",
+          "symbol": {
+            "type": "polygon",
+            "color": "#5e9420"
+          }
+        },
+        {
+          "label": "338",
+          "symbol": {
+            "type": "polygon",
+            "color": "#8b860d"
+          }
+        }
+      ],
+      "title": "",
+      "units": "deg",
+      "type": "compassRose"
+    },
+    "tileInfo": {
+      "vector": {
+        "supported": true,
+        "uriOrName": "mhk-atlas/all-regions-maximum_energy_direction_2026",
+        "styleLayers": [
+          {
+            "source-layer": "hexgrid",
+            "type": "fill",
+            "paint": {
+              "fill-color": [
+                "step",
+                [
+                  "to-number",
+                  [
+                    "get",
+                    "{{dimension}}"
+                  ]
+                ],
+                "#a8780d",
+                22.5,
+                "#be6828",
+                45.0,
+                "#cf5643",
+                67.5,
+                "#db4066",
+                90.0,
+                "#df2a93",
+                112.5,
+                "#d529c4",
+                135.0,
+                "#c041e5",
+                157.5,
+                "#a25cf3",
+                180.0,
+                "#7d73f0",
+                202.5,
+                "#5285dc",
+                225.0,
+                "#2c90bc",
+                247.5,
+                "#19959c",
+                270.0,
+                "#0c987c",
+                292.5,
+                "#249a52",
+                315.0,
+                "#5e9420",
+                337.5,
+                "#8b860d"
+              ]
+            }
+          },
+          {
+            "source-layer": "points",
+            "type": "circle",
+            "paint": {
+              "circle-radius": [
+                "step",
+                [
+                  "zoom"
+                ],
+                1.5,
+                5,
+                2.5,
+                9,
+                3,
+                10,
+                3.5,
+                11,
+                4.5
+              ],
+              "circle-color": [
+                "step",
+                [
+                  "to-number",
+                  [
+                    "get",
+                    "{{dimension}}"
+                  ]
+                ],
+                "#a8780d",
+                22.5,
+                "#be6828",
+                45.0,
+                "#cf5643",
+                67.5,
+                "#db4066",
+                90.0,
+                "#df2a93",
+                112.5,
+                "#d529c4",
+                135.0,
+                "#c041e5",
+                157.5,
+                "#a25cf3",
+                180.0,
+                "#7d73f0",
+                202.5,
+                "#5285dc",
+                225.0,
+                "#2c90bc",
+                247.5,
+                "#19959c",
+                270.0,
+                "#0c987c",
+                292.5,
+                "#249a52",
+                315.0,
+                "#5e9420",
+                337.5,
+                "#8b860d"
+              ],
+              "circle-opacity": 1
+            }
+          }
+        ],
+        "tileUri": "https://maps-api.nlr.gov/vector-tiles/mhk-atlas/all-regions-maximum_energy_direction_2026/metadata.json",
+        "clickable": false
+      },
+      "wms": {},
+      "cog": {
+        "tileJSONUrl": "https://titiler.nrelcloud.org/cog/tilejson.json?resampling_method=nearest&url=s3%3A%2F%2Fgds-cog-titiler%2Fmhk%2Fhindcast_alaska_maximum_energy_direction.tiff&bidx=%7B%7Bdimension%7D%7D&colormap_name=twilight-16&rescale=0%2C360"
+      }
+    },
+    "downloadInfo": {
+      "strategy": "smalljob",
+      "uri": "https://mapfiles.nlr.gov/downloads/68c95e2cb12e9eb9d3c3fc59.zip",
+      "supportedTypes": [
+        "shp"
+      ],
+      "disabledReason": ""
+    },
+    "defaultDisplayInfo": {
+      "dimensionSelectionLabel": "Timeframe"
+    },
+    "visible": false,
+    "isProtected": false,
+    "subtitle": "",
+    "_cmoceanColormap": "cmocean.cm.phase"
+  },
+  "Spectral Width": {
+    "_id": "68c5ef5c5a75374650eed3ea",
+    "title": "Spectral Width",
+    "metadata": "<p><span >Spectral width characterizes the relative spreading of energy along the wave spectrum. Small values indicate narrow-banded waves, and large values indicate mixed seas. Spectral width is unitless. See IEC 62600-101 equation 16 for details.</span></p>\n<hr/>\n<p>This data was generated from a regional UnSWAN model forced by a global WaveWatch III simulation. It spanned 32 years from 1979 through 2010. The 'annual' data is a complete average over that time-span. The monthly fields (available via drop-down) are averages across all years of the selected month. The data was developed with funding from the U.S. Department of Energy.<br><br>Additional details on model configuration can be found in the following publications:<br>--<br>Allahdadi, M.N., Gunawan, J. Lai, R. He, V.S. Neary, Development and validation of a regional-scale high-resolution unstructured model for wave energy resource characterization along the US East Coast, Renewable Energy, 2019, 136, 500-511. <a href=\"https://doi.org/10.1016/j.renene.2019.01.020\" target=\"_self\">https://doi.org/10.1016/j.renene.2019.01.020</a> <br>--<br>Ahn, S. V.S. Neary, Allahdadi, N. and R. He, Nearshore wave energy resource characterization along the East Coast of the United States, Renewable Energy, 2021, 172, <a href=\"https://doi.org/10.1016/j.renene.2021.03.037\" target=\"_self\">https://doi.org/10.1016/j.renene.2021.03.037</a>.<br><br>Details on how the variables are calculated can be found in IEC 62600-101:<br>--<br>International Electrotechnical Commission, 2015, \"\"Marine Energy - Wave, tidal and other water current converters; Part 101: Wave energy resource assessment and characterization\"\"; edition 1, <a href=\"https://webstore.iec.ch/publication/22593\" target=\"_self\">https://webstore.iec.ch/publication/22593</a>.\"</p>\n",
+    "tags": [
+      "Puerto Rico",
+      "Hawaii",
+      "Pacific",
+      "West Coast",
+      "Gulf Of America",
+      "Gulf of Mexico",
+      "Atlantic",
+      "Wave",
+      "Model",
+      "Alaska",
+      "U.S."
+    ],
+    "metaTags": [
+      "hexgrid-and-point-vector-layers",
+      "mhk-2021",
+      "wave",
+      "hindcast",
+      "vector-tiles"
+    ],
+    "categories": [
+      {
+        "name": "category",
+        "val": [
+          "Wave"
+        ]
+      }
+    ],
+    "dimensions": [
+      {
+        "paramName": "yr",
+        "title": "Annual",
+        "cogBandNumber": 1
+      },
+      {
+        "paramName": "01",
+        "title": "January",
+        "cogBandNumber": 2
+      },
+      {
+        "paramName": "02",
+        "title": "February",
+        "cogBandNumber": 3
+      },
+      {
+        "paramName": "03",
+        "title": "March",
+        "cogBandNumber": 4
+      },
+      {
+        "paramName": "04",
+        "title": "April",
+        "cogBandNumber": 5
+      },
+      {
+        "paramName": "05",
+        "title": "May",
+        "cogBandNumber": 6
+      },
+      {
+        "paramName": "06",
+        "title": "June",
+        "cogBandNumber": 7
+      },
+      {
+        "paramName": "07",
+        "title": "July",
+        "cogBandNumber": 8
+      },
+      {
+        "paramName": "08",
+        "title": "August",
+        "cogBandNumber": 9
+      },
+      {
+        "paramName": "09",
+        "title": "September",
+        "cogBandNumber": 10
+      },
+      {
+        "paramName": "10",
+        "title": "October",
+        "cogBandNumber": 11
+      },
+      {
+        "paramName": "11",
+        "title": "November",
+        "cogBandNumber": 12
+      },
+      {
+        "paramName": "12",
+        "title": "December",
+        "cogBandNumber": 13
+      }
+    ],
+    "variables": [
+      {
+        "dbColumn": "region",
+        "title": "Region",
+        "units": "name",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true
+      },
+      {
+        "dbColumn": "mean_{{dimension}}",
+        "title": "Avg - {{dimension}}",
+        "units": "-",
+        "scaleFactor": null,
+        "isQueryable": true,
+        "isDownloadable": true,
+        "isMappable": true
+      }
+    ],
+    "legendV2": {
+      "legendItems": [
+        {
+          "label": "< 0.1",
+          "symbol": {
+            "type": "polygon",
+            "color": "#2f0f3e"
+          }
+        },
+        {
+          "label": "0.1 - 0.2",
+          "symbol": {
+            "type": "polygon",
+            "color": "#531654"
+          }
+        },
+        {
+          "label": "0.2 - 0.3",
+          "symbol": {
+            "type": "polygon",
+            "color": "#791a61"
+          }
+        },
+        {
+          "label": "0.3 - 0.4",
+          "symbol": {
+            "type": "polygon",
+            "color": "#9f2462"
+          }
+        },
+        {
+          "label": "0.4 - 0.5",
+          "symbol": {
+            "type": "polygon",
+            "color": "#c0365b"
+          }
+        },
+        {
+          "label": "0.5 - 0.6",
+          "symbol": {
+            "type": "polygon",
+            "color": "#db5453"
+          }
+        },
+        {
+          "label": "0.6 - 0.7",
+          "symbol": {
+            "type": "polygon",
+            "color": "#eb7858"
+          }
+        },
+        {
+          "label": "0.7 - 0.8",
+          "symbol": {
+            "type": "polygon",
+            "color": "#f4a06e"
+          }
+        },
+        {
+          "label": "0.8 - 0.9",
+          "symbol": {
+            "type": "polygon",
+            "color": "#fac68c"
+          }
+        },
+        {
+          "label": "> 0.9",
+          "symbol": {
+            "type": "polygon",
+            "color": "#feedb0"
+          }
+        }
+      ],
+      "title": "",
+      "units": "",
+      "type": "default"
+    },
+    "tileInfo": {
+      "vector": {
+        "supported": true,
+        "uriOrName": "mhk-atlas/all-regions-spectral_width_2026",
+        "styleLayers": [
+          {
+            "source-layer": "points",
+            "type": "circle",
+            "paint": {
+              "circle-radius": [
+                "step",
+                [
+                  "zoom"
+                ],
+                1.5,
+                5,
+                2.5,
+                9,
+                3,
+                10,
+                3.5,
+                11,
+                4.5
+              ],
+              "circle-color": [
+                "step",
+                [
+                  "to-number",
+                  [
+                    "get",
+                    "{{dimension}}"
+                  ]
+                ],
+                "#2f0f3e",
+                0.1,
+                "#531654",
+                0.2,
+                "#791a61",
+                0.3,
+                "#9f2462",
+                0.4,
+                "#c0365b",
+                0.5,
+                "#db5453",
+                0.6,
+                "#eb7858",
+                0.7,
+                "#f4a06e",
+                0.8,
+                "#fac68c",
+                0.9,
+                "#feedb0"
+              ],
+              "circle-opacity": 1
+            }
+          },
+          {
+            "source-layer": "hexgrid",
+            "type": "fill",
+            "paint": {
+              "fill-color": [
+                "step",
+                [
+                  "to-number",
+                  [
+                    "get",
+                    "{{dimension}}"
+                  ]
+                ],
+                "#2f0f3e",
+                0.1,
+                "#531654",
+                0.2,
+                "#791a61",
+                0.3,
+                "#9f2462",
+                0.4,
+                "#c0365b",
+                0.5,
+                "#db5453",
+                0.6,
+                "#eb7858",
+                0.7,
+                "#f4a06e",
+                0.8,
+                "#fac68c",
+                0.9,
+                "#feedb0"
+              ],
+              "fill-opacity": 1
+            }
+          }
+        ],
+        "tileUri": "https://maps-api.nlr.gov/vector-tiles/mhk-atlas/all-regions-spectral_width_2026/metadata.json",
+        "clickable": false
+      },
+      "wms": {},
+      "cog": {
+        "tileJSONUrl": "https://titiler.nrelcloud.org/cog/tilejson.json?resampling_method=nearest&url="
+      }
+    },
+    "downloadInfo": {
+      "strategy": "smalljob",
+      "uri": "https://mapfiles.nlr.gov/downloads/68c5ef5c5a75374650eed3ea.zip",
+      "supportedTypes": [
+        "shp"
+      ],
+      "disabledReason": ""
+    },
+    "defaultDisplayInfo": {
+      "dimensionSelectionLabel": "Timeframe"
+    },
+    "visible": false,
+    "isProtected": false,
+    "subtitle": "",
+    "_cmoceanColormap": "cmocean.cm.matter_r"
+  }
+}
